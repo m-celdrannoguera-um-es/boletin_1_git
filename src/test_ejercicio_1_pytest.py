@@ -5,4 +5,8 @@ def capital_case(x):
 
 def test_capital_case():
     assert capital_case('semáforo') == 'Semáforo'
-	
+
+
+def test_raises_exception_on_non_string():
+    with pytest.raises(TypeError):
+        capital_case(9)
